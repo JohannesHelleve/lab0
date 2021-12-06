@@ -33,11 +33,17 @@ command not found: java
 4. Legg til "path variable" for Java.
     - I søkefeltet ned til venstre (Windows søk) skriv "Vis avanserte Systeminnstillinger" og trykk ``enter``.
     - Trykk på ``Miljøvariabler``
-    ![](images/Avanserte systeminnstillinger.png)
+
+    <img src="images/Avanserte-systeminnstillinger.png" alt="drawing" width="300"/>
+
     - Under "Brukervariabler for <ditt brukernavn>" trykk på ``Ny``. Variabelnavn: ``JAVA_HOME`` og Variabelverdi: ``C:\Program Files\Java``.
-    ![](images/JAVA_HOME.png)
+
+    <img src="images/JAVA_HOME.png" alt="drawing" width="300"/>
+
     - Under "Systemvariabler" dobbelklikk variabelen "Path". Trykk "Ny" og skriv inn ``C:\Program Files\Java\jdk-17.0.1\bin"
-    ![](images/Path.png)
+
+    <img src="images/Path.png" alt="drawing" width="300"/>
+    
     - Trykk "Ok" til alle vinduer er stengt.
 
 Når du er ferdig med installasjonen kan du kjøre `java -version` kommandoen igjen, og sjekke at versjonen er riktig.
