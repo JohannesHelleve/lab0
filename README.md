@@ -1,10 +1,10 @@
 # Oppsett av Java og Eclipse integrert utviklingsmiljø (IDE)
-_Dette dokumentet beskriver hvordan du installerer programvaren du trenger for INF101 - vår 2021._
+_Dette dokumentet beskriver hvordan du installerer programvaren du trenger for INF101 - vår 2022._
 
 Målet med denne guiden er å installere
 
 - [Java](#installere-java)
-- [Eclipse](#Eclipse)
+- [Visual Studio Code](#visual-studio-code)
 - [git](#git)
 
 **Du er ferdig når du har opprettet og kjørt HelloWorld.java fra et terminalvindu og [Hello World prosjektet](https://git.app.uib.no/ii/inf101/22v/) i Eclipse, og JUnit testene i Visual Studio Code er grønne (passerer)**.
@@ -34,19 +34,19 @@ command not found: java
     - I søkefeltet ned til venstre (Windows søk) skriv "Vis avanserte Systeminnstillinger" og trykk ``enter``.
     - Trykk på ``Miljøvariabler``
 
-    <img src="images/Avanserte-systeminnstillinger.png" alt="drawing" width="300"/>
+    <img src="images/Avanserte-systeminnstillinger.png" alt="drawing" width="350"/>
 
     - Under "Brukervariabler for <ditt brukernavn>" trykk på ``Ny``. Variabelnavn: ``JAVA_HOME`` og Variabelverdi: ``C:\Program Files\Java``.
 
-    <img src="images/JAVA_HOME.png" alt="drawing" width="300"/>
+    <img src="images/JAVA_HOME.png" alt="drawing" width="400"/>
 
-    - Under "Systemvariabler" dobbelklikk variabelen "Path". Trykk "Ny" og skriv inn ``C:\Program Files\Java\jdk-17.0.1\bin"
+    - Under "Systemvariabler" dobbelklikk variabelen "Path". Trykk "Ny" og skriv inn ``C:\Program Files\Java\jdk-17.0.1\bin``
 
-    <img src="images/Path.png" alt="drawing" width="300"/>
+    <img src="images/Path.png" alt="drawing" width="400"/>
     
     - Trykk "Ok" til alle vinduer er stengt.
 
-Når du er ferdig med installasjonen kan du kjøre `java -version` kommandoen igjen, og sjekke at versjonen er riktig.
+Når du er ferdig med installasjonen kan du kjøre `java -version` kommandoen igjen *i et nytt terminalvindu*, og sjekke at versjonen er riktig.
 
 ```
 > java -version
@@ -59,17 +59,11 @@ OpenJDK 64-Bit Server VM (build 17.0.1+12-39, mixed mode, sharing)
 </a>
 
 ### Troubleshooting
-
 - Dersom terminalvinduet ikke forstår kommandoen (command not found eller lignende) etter Java er installert, kan du prøve å starte et nytt terminalvindu og se om det fungerer der.
-- Dersom den fortsatt ikke forstår kommandoen (command not found), kan det være at Java ikke har blitt lagt riktig til i det som heter Path-variabelen. I så fall ligger Java fysisk på maskinen, men terminalen vet ikke hvor. Dette problemet er vanligst på Windows maskiner: Finn ut hvor på maskinen Java har blitt installert (ofte `C:\Programfiler\Java\jdk1.15.0.1`). Sjekk at det ligger en mappe som heter `bin` i mappen. 
-Høyreklikk Min Datamaskin -> Egenskaper -> Avanserte innstillinger -> Fanen Avansert -> Miljøvariabler -> under systemvariabler scroller du til linjen som heter Path og trykker på den -> Rediger -> Ny (linje) -> Lim inn filbanen til bin-mappen du nettopp fant -> Ok -> Ok. (Husk å åpne et nytt temrinalvindu etter du er ferdig).
-- Det er ikke så farlig med hvilke tall du har for X og Y, eller om du bruker en annen distribusjon enn openjdk.
 - Har du ikke Windows men likevel problemer med path se [her](https://www.baeldung.com/java-home-on-windows-7-8-10-mac-os-x-linux).
 
 ## Kjøre Java
-
 ### 2.1) Kjøre HelloWorld.java i et terminalvindu
-
 Når du har installert Java kan du kjøre et javaprogram fra terminalen.
 
 Lag en ny fil på en valgfri lokasjon, med et valgfritt _tekstredigeringsverktøy_ (f.eks. Notepad++, Text Edit, TextPad, Atom eller Visual Studio Code), og navngi filen "HelloWorld.java". (Filnavnet skal **ikke** ende med .txt).
@@ -82,7 +76,6 @@ public class HelloWorld {
 		System.out.println("Hello World!");
 	}
 }
-
 ```
 
 Fra terminalen kjører du HelloWorld.java ved å bruke kommandoen
@@ -101,11 +94,9 @@ Caused by: java.lang.ClassNotFoundException: HelloWorld.java
 ```
 
 ### Troubleshoothing
-
 TextEdit vil ofte lage nye filer i RTF-format (tilsvarende som Word-filer). Når du skriver kode ønsker du å bruke _rene tekstfiler_. Gå til innstillinger i TextEdit og velg ren tekstfil, og opprett så en ny fil som du bruker herfra.
 
 ### 2.2) Kommandoer for terminal-navigering
-
 I terminal-vinduet navigerer du ved hjelp av kommandoen `cd` etterfulgt av navnet på mappen du vil gå _inn i_, eller `..` dersom du vil gå _ut_ av mappen du er i.
 
 `cd INF101` vil forsøke å navigere deg _inn i_ en mappe INF101 som ligger i mappen du er i. Hvis INF101 ikke finnes i mappen du er i, vil du typisk få feilmeldingen `cd: no such file or directory: INF101`.
@@ -117,34 +108,14 @@ I terminal-vinduet navigerer du ved hjelp av kommandoen `cd` etterfulgt av navne
 ✅ Når du får til å skrive ut `Hello World!` fra terminalen kan du gå videre.
 
 #### Troubleshooting
-
 NB: Disse to kommandoene vil ikke ødelegge, slette eller endre noe på PCen din. De er derfor trygge å eksperimentere med. Hvis du roter deg vekk i terminalen din kan du alltid bare lukke den og åpne en ny.
 
-<a name="Eclipse">
+<a name="visual-studio-code">
 
-## 3) Eclipse
+## 4) Visual Studio Code
+Vi bruker [Visual Studio Code](https://en.wikipedia.org/wiki/Visual_Studio_Code) til utvikling i dette kurset. De som har fullført INF100 de siste to årene burde allerede ha Visual Studio Code installert. Hvis ikke kan du laste det ned her: [https://code.visualstudio.com/download](https://code.visualstudio.com/download).
 
-Vi bruker [Eclipse](<https://en.wikipedia.org/wiki/Eclipse_(software)>) IDE versjon 2020-12 til utvikling i dette kurset. Dersom du har Eclipse installert allerede må du sjekke hvilken versjon du har; tidligere versjoner vil ikke nødvendigvis virke helt likt.
-
-[Klikk her for å laste ned og installere Eclipse IDE 2020-12](https://www.eclipse.org/downloads/packages/release/2020-12/r/eclipse-ide-java-developers). Velg ditt operativsystem under Download Links og kjør den nedlastede installasjons-filen. Windows-brukere som ikke er vant til å installere fra en .zip-fil kan trykke på fanen "Eclipse Installer" oppe til venstre og laste ned installeringsprogrammet til Eclipse i stedet.
-
-**Du må installere Eclipse for Java Developers, ikke Java EE Developers, C/C++, etc.**
-
-Velg riktig mappe for Java 15-installasjonen din før du trykker på INSTALL. Hvis du ikke ser Java 15 i nedtrekksmenyen kan du finne riktig mappe ved å gå til terminalen din og skrive kommandoen `which java` i Linux/Unix/Mac OS X eller `where java` i Windows.
-
-Når du er ferdig å installere Eclipse kan du åpne den og velge et passende navn for ditt [workspace](https://www.eclipse.org/forums/index.php/t/447044/).
-
-Når Eclipse allerede er åpen finner du versjons-informasjon i menyen under Eclipse -> About Eclipse for Mac og Help -> About Eclipse for Windows.
-More info on [intalling Eclipse](https://www.eclipse.org/downloads/packages/installer)
-
-✅ Når du har åpnet Eclipse med versjon 2020-12 kan du gå videre.
-
-### Troubleshooting
-
-- IDE (Integrated Development Environment) betegner en teksteditor som er spesielt laget for å utvikle programmer, og inneholder funksjonalitet for å kjøre og teste koden. Eksempler på Java-IDEer er Eclipse, IntelliJ og Netbeans.
-- Du kan ha flere Eclipse-versjoner på maskinen uten at de påvirker hverandre.
-- Når du åpner Eclipse vil den spørre deg om å velge "[workspace](https://www.eclipse.org/forums/index.php/t/447044/)". Et workspace er en mappe der Eclipse ser etter tidligere åpna prosjekter og instillinger, og er uavhengig av Java. Du vil ikke trenge å levere inn ditt workspace eller Eclipse-instillinger.
-- Dersom du ønsker å bruke [IntelliJ](https://www.jetbrains.com/idea/download) eller et annet IDE/editor program er det greit for oss. Oppgavene er Maven-baserte og vil fungere i de fleste IDEer. Vi kan imidlertid ikke love deg at gruppeledere eller foreleser kan hjelpe deg med ditt favoritt-IDE.
+For å hjelpe oss skrive Java-kode vil vi installere en extension kalt "Extension pack for Java". Inne i Visual Studio Code trykk på "Extensions" i kolonnen til venstre og søk "Extension pack for Java". Trykk på ``Install``.
 
 </a>
 <a name="git">
@@ -183,9 +154,8 @@ usage: git [--version] [--help] [-C <path>] [-c name=value]
 ### 4.2) Git server
 
 Uib har sin egen GitLab server, før du får tilgang til den må du opprette konto der.
-De av dere som har tatt INF100 i høst har gjerne allerede opprettet en slik konto.
 
-Gå til [https://git.app.uib.no/](https://git.app.uib.no/) . Logg inn med Dataporten, IKKE MED Github.
+Gå til [https://git.app.uib.no/](https://git.app.uib.no/) . Logg inn med Dataporten, **IKKE MED Github**. Brukere med Github vil ikke gis tilgang.
 Da blir en konto laget for deg på Gitlab. Viktig: du skal ikke endre det automatiske brukernavnet du får.
 Hvis du endrer brukernavn vil du ikke få tilgang til øvelsene i kurset.
 Hvis du ved et uhell har byttet brukernavnet ditt, må du bytte det tilbake til samme som din UiB-mail.
