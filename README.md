@@ -36,7 +36,7 @@ command not found: java
 
     <img src="images/Avanserte-systeminnstillinger.png" alt="drawing" width="350"/>
 
-    - Under "Brukervariabler for <ditt brukernavn>" trykk på ``Ny``. Variabelnavn: ``JAVA_HOME`` og Variabelverdi: ``C:\Program Files\Java``.
+    - Under "Brukervariabler for <ditt brukernavn>" trykk på ``Ny``. Variabelnavn: ``JAVA_HOME`` og Variabelverdi: ``C:\Program Files\Java\jdk-17.0.1``.
 
     <img src="images/JAVA_HOME.png" alt="drawing" width="400"/>
 
