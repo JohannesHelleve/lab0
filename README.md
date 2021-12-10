@@ -1,4 +1,4 @@
-# Oppsett av Java og Eclipse integrert utviklingsmiljø (IDE)
+# Oppsett av Java, Git og Visual Studio Code
 _Dette dokumentet beskriver hvordan du installerer programvaren du trenger for INF101 - vår 2022._
 
 Målet med denne guiden er å installere
@@ -7,7 +7,7 @@ Målet med denne guiden er å installere
 - [Visual Studio Code](#visual-studio-code)
 - [git](#git)
 
-**Du er ferdig når du har opprettet og kjørt HelloWorld.java fra et terminalvindu og [Hello World prosjektet](https://git.app.uib.no/ii/inf101/22v/) i Eclipse, og JUnit testene i Visual Studio Code er grønne (passerer)**.
+**Du er ferdig når du har opprettet og kjørt HelloWorld.java fra et terminalvindu og [Hello World prosjektet](https://git.app.uib.no/ii/inf101/22v/) i Visual Studio Code, og JUnit testene i Visual Studio Code er passerer**.
 
 <a name="installere-java">
 
