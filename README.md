@@ -55,7 +55,7 @@ OpenJDK Runtime Environment (build 17.0.1+12-39)
 OpenJDK 64-Bit Server VM (build 17.0.1+12-39, mixed mode, sharing)
 ```
 
-✅ Når `java -version` kommandoen gir en versjon over 15 kan du gå videre.
+✅ Når `java -version` kommandoen gir versjon 17 kan du gå videre.
 </a>
 
 ### Troubleshooting
