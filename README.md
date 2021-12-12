@@ -129,6 +129,10 @@ Git er et versjonskontroll verktøy som hjelper deg å ta vare på koden. Du kan
 
 Vi bruker [git](https://en.wikipedia.org/wiki/Git) for å levere ut oppgavekode i dette kurset. Vi anbefaler at du bruker det når du koder selv for å sikre deg at du ikke mister det du har gjort. git er meget populært i næringslivet, og er et verktøy du får mye igjen for å lære deg skikkelig. Du vil heldigvis få mange anledninger til det i INF101.
 
+For de som foretrekker video over tekst har vi en [installasjonsguide](https://www.youtube.com/watch?v=lw3Vz6WsomM):
+
+<a href="https://youtu.be/lw3Vz6WsomM"><img src="https://img.youtube.com/vi/lw3Vz6WsomM/maxresdefault.jpg" alt="Git Guide - Institutt for Informatikk" style="width:1px;" width=500px></a>
+
 Sjekk om du har git installert ved å skrive `git` i et terminalvindu. Dersom du har git installert vil du få `usage: git` og en oversikt over mulige argumenter. Dersom du får `command not found` eller tilsvarende må du installere git.
 
 ```
