@@ -303,5 +303,6 @@ Når alle testene passerer må du laste opp endringene du har gjort i koden. Det
 
 5. Trykk "Sync Changes"
 
+Når du har lastet opp endringene (commit+push) leverer du oppgaven på MittUiB under lab0.
 </a>
 
