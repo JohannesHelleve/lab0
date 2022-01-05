@@ -291,7 +291,7 @@ Når alle testene passerer må du laste opp endringene du har gjort i koden. Det
 
 3. Trykk på grønt kryss for de filene du har gjort endringer på i "Unstaged Changes".
 4. Skriv en "Commit Message" som forklarer hva du har endret og trykk "Commit and Push".
-<img src="images/stagingarea.png" alt="Infy_image" width="300"/>
+<img src="images/stagingarea.png" alt="Infy_image" width="500"/>
 
 
 ### Lever med Visual Studio Code
