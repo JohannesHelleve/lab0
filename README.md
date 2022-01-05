@@ -262,7 +262,7 @@ _Valgfritt: Dobbelttrykk på en av testene for å åpne filen som testene ligger
 ✅ Når de to JUnit-testene kjører og er grønne er du ferdig med installasjonen!
 
 
-### 5) Importer et prosjekt i Visual Studio Code
+### 6) Importer et prosjekt i Visual Studio Code
 Videoguiden for Git viser hvordan man importerer/kloner et prosjekt inn i visual studio code.
 
 #### Troubleshooting
