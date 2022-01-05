@@ -7,6 +7,11 @@ package lab0;
  *
  */
 public class HelloWorld {
+	
+	/*
+	 * TODO: Set this variable to true.
+	 */
+	public final static boolean FINISHED_WITH_LAB0 = false;
 
 	public static void main(String[] args) {
 		String helloWorld = getHelloWorld();

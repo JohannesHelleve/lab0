@@ -17,7 +17,12 @@ public class HelloWorldTest{
 		String currentJavaVersion = System.getProperty("java.version");
 		Version current = Runtime.Version.parse(currentJavaVersion);
 		Version minimal = Runtime.Version.parse(minimalJavaVersion);
-		assertTrue(current.compareTo(minimal) >= 0, "Your Java version is too low, should be at least 13.0.1. Current version is: " + currentJavaVersion);
+		assertTrue(current.compareTo(minimal) >= 0, "Your Java version is too low, should be at least 17.0.1. Current version is: " + currentJavaVersion);
+	}
+	
+	@Test
+	void finishedWithLab0() {
+		assertTrue(HelloWorld.FINISHED_WITH_LAB0, "You must set this variable to true.");
 	}
 
 }
