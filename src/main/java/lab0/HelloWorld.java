@@ -9,7 +9,7 @@ package lab0;
 public class HelloWorld {
 	
 	/*
-	 * TODO: Set this variable to true.
+	 * TODO: Set this variable to true
 	 */
 	public final static boolean FINISHED_LAB0 = false;
 
