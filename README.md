@@ -1,4 +1,4 @@
-# Oppsett av Java, Git og Visual Studio Code
+# Oppsett av Java, Git og Kodeeditor
 _Dette dokumentet beskriver hvordan du installerer programvaren du trenger for INF101 - vår 2022._
 
 Målet med denne guiden er å installere
@@ -7,7 +7,7 @@ Målet med denne guiden er å installere
 - [Kodeeditor (IDE)](#ide)
 - [git](#git)
 
-**Du er ferdig når du har opprettet og kjørt HelloWorld.java fra et terminalvindu og [Hello World prosjektet](https://git.app.uib.no/ii/inf101/22v/) i en kodeeditor, og JUnit-testene passerer**.
+**Etter installasjon skal koden leveres på MittUiB (via Codegrade)**.
 
 <a name="installere-java">
 
