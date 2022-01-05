@@ -8,7 +8,7 @@ Målet med denne guiden er å installere
 - [git](#git)
 - [Programmeringsoppgave](programmeringsoppgave)
 
-**Etter installasjon skal koden leveres på MittUiB (via Codegrade)**.
+**Etter installasjon og programmeringsoppgaven skal koden leveres på MittUiB (via Codegrade)**.
 
 <a name="installere-java">
 
