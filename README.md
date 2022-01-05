@@ -287,11 +287,11 @@ Når alle testene passerer må du laste opp endringene du har gjort i koden. Det
 ### Lever med Eclipse
 1. Høyreklikk det aktuelle prosjektet (lab0) i "Project Explorer".
 2. Velg ``Team --> Commit``
-<img src="uploads/980979582abc708560241cc5fb14c566/Infy.png" alt="Infy_image" width="150"/>
+<img src="images/commitEclipse.png" alt="Infy_image" width="150"/>
 
 3. Trykk på grønt kryss for de filene du har gjort endringer på i "Unstaged Changes".
 4. Skriv en "Commit Message" som forklarer hva du har endret og trykk "Commit and Push".
-<img src="uploads/980979582abc708560241cc5fb14c566/Infy.png" alt="Infy_image" width="150"/>
+<img src="images/stagingarea.png" alt="Infy_image" width="150"/>
 
 
 ### Lever med Visual Studio Code
@@ -299,7 +299,7 @@ Når alle testene passerer må du laste opp endringene du har gjort i koden. Det
 2. Under "Changes" trykk på +-tegnet for de filene du har endret på. 
 3. I tekstfeltet ovenfor skriv hva du har endret.
 4. Trykk ✅ (commit) rett ovenfor tekstfeltet.
-<img src="uploads/980979582abc708560241cc5fb14c566/Infy.png" alt="Infy_image" width="150"/>
+<img src="images/vscodeCommit.png" alt="Infy_image" width="150"/>
 
 5. Trykk "Sync Changes"
 
