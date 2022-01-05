@@ -119,7 +119,7 @@ NB: Disse to kommandoene vil ikke ødelegge, slette eller endre noe på PCen din
 <a name="ide">
 
 ## 4) Kodeeditor/IDE 
-For å hjelpe oss å skrive kode benytter vi oss av en IDE (Integrated Development Environment). For Java-utvikling er det hovedsakelig tre anbefalte IDE'er: Eclipse, Visual Studio Code og IntelliJ.
+For å hjelpe oss å skrive kode benytter vi oss av en IDE (Integrated Development Environment). For Java-utvikling er det hovedsakelig tre anbefalte IDE'er: Eclipse, Visual Studio Code og IntelliJ. I forelesningene kommer hovedsakelig Eclipse og VS Code til å bli brukt, men hvilken som helst vil fungere for deres egen bruk.
 
 #### Visual Studio Code
 Dere har tidligere brukt [Visual Studio Code](https://en.wikipedia.org/wiki/Visual_Studio_Code). De som har fullført INF100 de siste to årene burde allerede ha Visual Studio Code installert. Hvis ikke kan du laste det ned her: [https://code.visualstudio.com/download](https://code.visualstudio.com/download).
@@ -129,7 +129,7 @@ For å hjelpe oss skrive Java-kode vil vi installere en extension kalt "Extensio
 #### Eclipse
 [Eclipse](<https://en.wikipedia.org/wiki/Eclipse_(software)>) er IDE'en brukt i tidligere semestre av INF101.
 
-[Klikk her for å laste ned og installere Eclipse IDE 2020-12](https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2021-12/R/eclipse-inst-jre-win64.exe).
+[Klikk her for å laste ned og installere Eclipse IDE 2021-12](https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2021-12/R/eclipse-inst-jre-win64.exe).
 
 **Du må installere Eclipse for Java Developers, ikke Java EE Developers, C/C++, etc.**
 
