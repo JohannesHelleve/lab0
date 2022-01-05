@@ -6,6 +6,7 @@ Målet med denne guiden er å installere
 - [Java](#installere-java)
 - [Kodeeditor (IDE)](#ide)
 - [git](#git)
+- [Programmeringsoppgave](programmeringsoppgave)
 
 **Etter installasjon skal koden leveres på MittUiB (via Codegrade)**.
 
@@ -268,3 +269,39 @@ Videoguiden for Git viser hvordan man importerer/kloner et prosjekt inn i visual
 #### Troubleshooting
 
 Se om du finner ut av det sammen med en medelev eller Google. Eventuelt spør på gruppe.
+
+<a name="programmeringsoppgave">
+
+# 7) Kodeoppgave
+For å få lab0 godkjent må du levere dette prosjektet hvor alle testene passerer.
+
+Filen ``HelloWorldTest.java`` inneholder tre tester:
+ - ``testGetHelloWorld``
+ - ``testJavaVersion``
+ - ``finishedLab0``
+
+For at disse testene ska passere må Java og IDE være installert riktig, Java-versjonen må være 17 og du må sette en variabel til ``true``.
+
+Når alle testene passerer må du laste opp endringene du har gjort i koden. Dette gjøres ved bruk av GIT med kommandoene ``add``, ``commit`` og ``push``.
+
+### Lever med Eclipse
+1. Høyreklikk det aktuelle prosjektet (lab0) i "Project Explorer".
+2. Velg ``Team --> Commit``
+<img src="uploads/980979582abc708560241cc5fb14c566/Infy.png" alt="Infy_image" width="150"/>
+
+3. Trykk på grønt kryss for de filene du har gjort endringer på i "Unstaged Changes".
+4. Skriv en "Commit Message" som forklarer hva du har endret og trykk "Commit and Push".
+<img src="uploads/980979582abc708560241cc5fb14c566/Infy.png" alt="Infy_image" width="150"/>
+
+
+### Lever med Visual Studio Code
+1. I kolonnen til venstre trykk på "Version Control"
+2. Under "Changes" trykk på +-tegnet for de filene du har endret på. 
+3. I tekstfeltet ovenfor skriv hva du har endret.
+4. Trykk ✅ (commit) rett ovenfor tekstfeltet.
+<img src="uploads/980979582abc708560241cc5fb14c566/Infy.png" alt="Infy_image" width="150"/>
+
+5. Trykk "Sync Changes"
+
+</a>
+
