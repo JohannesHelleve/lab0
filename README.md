@@ -4,10 +4,10 @@ _Dette dokumentet beskriver hvordan du installerer programvaren du trenger for I
 Målet med denne guiden er å installere
 
 - [Java](#installere-java)
-- [Visual Studio Code](#visual-studio-code)
+- [Kodeeditor (IDE)](#ide)
 - [git](#git)
 
-**Du er ferdig når du har opprettet og kjørt HelloWorld.java fra et terminalvindu og [Hello World prosjektet](https://git.app.uib.no/ii/inf101/22v/) i Visual Studio Code, og JUnit testene i Visual Studio Code er passerer**.
+**Du er ferdig når du har opprettet og kjørt HelloWorld.java fra et terminalvindu og [Hello World prosjektet](https://git.app.uib.no/ii/inf101/22v/) i en kodeeditor, og JUnit-testene passerer**.
 
 <a name="installere-java">
 
@@ -18,7 +18,7 @@ For at Java skal virke er det 2 hovedmomenter som må være på plass:
 - En mappe som heter jdk-17.0.1 eller lignende må finnes på PCen, inne i den vil det finnes blandt annet 2 filer som heter java.exe og javac.exe
 - PCen må vite hvor denne mappen er slik at når du skriver en kommando så finner PCen rett fil. Dette gjøres litt forskjellig avhengig av operativsystem.
 
-Sjekk om du har Java installert ved å gå til et terminalvindu og skrive `java -version`. Dersom du har Java installert vil du få vite hvilken versjon. Dersom du får `command not found` eller tilsvarende, eller en lavere versjon enn Java 17 (f.eks. 8 eller 9) må du installere nyeste versjonen.
+Sjekk om du har Java installert ved å gå til et terminalvindu (command line) og skrive `java -version`. Dersom du har Java installert vil du få vite hvilken versjon. Dersom du får `command not found` eller tilsvarende, eller en lavere versjon enn Java 17 (f.eks. 8 eller 9) må du installere nyeste versjonen.
 
 
 ```
@@ -61,6 +61,12 @@ OpenJDK 64-Bit Server VM (build 17.0.1+12-39, mixed mode, sharing)
 ### Troubleshooting
 - Dersom terminalvinduet ikke forstår kommandoen (command not found eller lignende) etter Java er installert, kan du prøve å starte et nytt terminalvindu og se om det fungerer der.
 - Har du ikke Windows men likevel problemer med path se [her](https://www.baeldung.com/java-home-on-windows-7-8-10-mac-os-x-linux).
+
+### Mac
+For å installere Java for mac benytt dere av denne guiden:
+https://codippa.com/install-openjdk16-macos/ 
+
+Den omtaler JDK 16. Instalasjonsprosessen er lik, men bruk heller JDK 17: https://jdk.java.net/17/ 
 
 ## Kjøre Java
 ### 2.1) Kjøre HelloWorld.java i et terminalvindu
@@ -110,12 +116,30 @@ I terminal-vinduet navigerer du ved hjelp av kommandoen `cd` etterfulgt av navne
 #### Troubleshooting
 NB: Disse to kommandoene vil ikke ødelegge, slette eller endre noe på PCen din. De er derfor trygge å eksperimentere med. Hvis du roter deg vekk i terminalen din kan du alltid bare lukke den og åpne en ny.
 
-<a name="visual-studio-code">
+<a name="ide">
 
-## 4) Visual Studio Code
-Vi bruker [Visual Studio Code](https://en.wikipedia.org/wiki/Visual_Studio_Code) til utvikling i dette kurset. De som har fullført INF100 de siste to årene burde allerede ha Visual Studio Code installert. Hvis ikke kan du laste det ned her: [https://code.visualstudio.com/download](https://code.visualstudio.com/download).
+## 4) Kodeeditor/IDE 
+For å hjelpe oss å skrive kode benytter vi oss av en IDE (Integrated Development Environment). For Java-utvikling er det hovedsakelig tre anbefalte IDE'er: Eclipse, Visual Studio Code og IntelliJ.
+
+#### Visual Studio Code
+Dere har tidligere brukt [Visual Studio Code](https://en.wikipedia.org/wiki/Visual_Studio_Code). De som har fullført INF100 de siste to årene burde allerede ha Visual Studio Code installert. Hvis ikke kan du laste det ned her: [https://code.visualstudio.com/download](https://code.visualstudio.com/download).
 
 For å hjelpe oss skrive Java-kode vil vi installere en extension kalt "Extension pack for Java". Inne i Visual Studio Code trykk på "Extensions" i kolonnen til venstre og søk "Extension pack for Java". Trykk på ``Install``.
+
+#### Eclipse
+[Eclipse](<https://en.wikipedia.org/wiki/Eclipse_(software)>) er IDE'en brukt i tidligere semestre av INF101.
+
+[Klikk her for å laste ned og installere Eclipse IDE 2020-12](https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2021-12/R/eclipse-inst-jre-win64.exe).
+
+**Du må installere Eclipse for Java Developers, ikke Java EE Developers, C/C++, etc.**
+
+Velg riktig mappe for Java 17-installasjonen din før du trykker på INSTALL. Hvis du ikke ser Java 17 i nedtrekksmenyen kan du finne riktig mappe ved å gå til terminalen din og skrive kommandoen `which java` i Linux/Unix/Mac OS X eller `where java` i Windows.
+
+Når du er ferdig å installere Eclipse kan du åpne den og velge et passende navn for ditt workspace. F.eks.: "workspace - INF101v22".
+
+Når Eclipse allerede er åpen finner du versjons-informasjon i menyen under Eclipse -> About Eclipse for Mac og Help -> About Eclipse for Windows.
+More info on [intalling Eclipse](https://www.eclipse.org/downloads/packages/installer)
+
 
 </a>
 <a name="git">
@@ -162,29 +186,13 @@ Uib har sin egen GitLab server, før du får tilgang til den må du opprette kon
 Gå til [https://git.app.uib.no/](https://git.app.uib.no/) . Logg inn med Dataporten, **IKKE MED Github**. Brukere med Github vil ikke gis tilgang.
 Da blir en konto laget for deg på Gitlab. Viktig: du skal ikke endre det automatiske brukernavnet du får.
 Hvis du endrer brukernavn vil du ikke få tilgang til øvelsene i kurset.
-Hvis du ved et uhell har byttet brukernavnet ditt, må du bytte det tilbake til samme som din UiB-mail.
-For eksempel:
-hvis din mail er Fornavn.Etternavn@student.uib.no, skal brukernavnet på gitlab være Fornavn.Etternavn.
-Du bytter brukernavn her: [https://git.app.uib.no/profile/account](https://git.app.uib.no/profile/account) .
 
-### 4.3) INF101 gruppe på GitLab
-
-Når du er logget på GitLab, klikk denne linken:
-[https://git.app.uib.no/ii/inf101/21v/students](https://git.app.uib.no/ii/inf101/21v/students)
-
-Klikk på "Request Access"
-Du vil automatisk få tilgang til gruppen etter noen minutter, hvis ikke må du kontakte gruppeleder.
-
-Når vi lager ukesoppgaver og obligatoriske semesteroppgaver kopieres disse inn på deres private git resository.
-Derfor finner dere de tilgjengelige oppgavene på https://git.app.uib.no/ii/inf101/21v/assignments
-
-### 4.4) Sette opp ssh key
+### 4.3) Sette opp ssh key
 
 Det finnes flere måter å logge inn når man bruker git, men det å skrive brukernavn og passord hver gang man har gjort noen endringer er unødvendig.
 En ssh key lagres på PCen slik at hver gang du ber om tilkobling til en server så sjekkes ssh key istedenfor å be om passord.
 
-Inne på GitLab trykker du på brukerikonet helt oppe til høyre og velger settings, i menyen til venstre dukker da opp SSH keys.
-Her trykker du på "generate one" og følger instruksjonene.
+For å opprette ssh-ky følg denne guiden: https://git.app.uib.no/help/ssh/README#generate-an-ssh-key-pair. Her kan det være enklere å se videoen ovenfor.
 
 ### Troubleshooting
 
@@ -192,7 +200,7 @@ En ssh key lagres på PCen, hvis du har 2 PCer må du gjøre dette på begge PCe
 
 </a>
 
-## 5) Importere er prosjekt inn i Eclipse
+## 5) Importere et prosjekt inn i Eclipse
 
 Eclipse har innebygget støtte for git som kan brukes, men git kan også brukes uavhengig av Eclipse.
 Her forklarer vi hvordan du bruker git separat siden det er den måten som er lettest å forstå.
@@ -252,6 +260,10 @@ Sjekk at testene blir grønne (godkjent) i JUnit-vinduet.
 _Valgfritt: Dobbelttrykk på en av testene for å åpne filen som testene ligger i (HelloWorldTest.java). Se om du klarer å omtrentlig forstå hva de to testene gjør._
 
 ✅ Når de to JUnit-testene kjører og er grønne er du ferdig med installasjonen!
+
+
+### 5) Importer et prosjekt i Visual Studio Code
+Videoguiden for Git viser hvordan man importerer/kloner et prosjekt inn i visual studio code.
 
 #### Troubleshooting
 
