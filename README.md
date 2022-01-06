@@ -303,6 +303,8 @@ Når alle testene passerer må du laste opp endringene du har gjort i koden. Det
 
 5. Trykk "Sync Changes"
 
+Refresh gitlab-siden hvor prosjektet ditt ligger og se at de endringene du har gjort har kommet.
+
 **Når du har lastet opp endringene (commit+push) leverer du oppgaven på MittUiB under lab0.**
 </a>
 
