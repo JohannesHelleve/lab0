@@ -13,7 +13,7 @@ Målet med denne guiden er å installere
 <a name="installere-java">
 
 ## 1) Installere Java
-Vi bruker [Java](https://en.wikipedia.org/wiki/Java_(programming_language)) i kurset, selv om de fleste versjoner av Java vi kommer til å lære i dette kurset har vært der siden Java 8 anbefales det alltid å ha nyeste versjon av Java. Java 17 kom ut i september 2021 så det er denne vi vil bruke i dette kurset. **Merk**: De fleste Java-brukere er kjent med Oracle sin JDK, men i dette emnet vil vi bruke OpenJDK.
+Vi bruker [Java](https://en.wikipedia.org/wiki/Java_(programming_language)) i kurset, selv om de fleste funksjonene av Java vi kommer til å lære i dette kurset har vært der siden Java 8 anbefales det alltid å ha nyeste versjon av Java. Java 17 kom ut i september 2021 så det er denne vi vil bruke i dette kurset. **Merk**: De fleste Java-brukere er kjent med Oracle sin JDK, men i dette emnet vil vi bruke OpenJDK.
 
 For at Java skal virke er det 2 hovedmomenter som må være på plass:
 - En mappe som heter jdk-17.0.1 eller lignende må finnes på PCen, inne i den vil det finnes blandt annet 2 filer som heter java.exe og javac.exe
