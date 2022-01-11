@@ -1,87 +1,46 @@
-# Oppsett av Java, Git og Kodeeditor
+# Oppsett av Java, Git og Visual Studio Code
 _Dette dokumentet beskriver hvordan du installerer programvaren du trenger for INF101 - vår 2022._
 
-Målet med denne guiden er å installere
+Målet med denne guiden er å installer og bli kjent med:
 
-- [Java](#installere-java)
-- [Kodeeditor (IDE)](#ide)
-- [git](#git)
-- [Programmeringsoppgave](programmeringsoppgave)
+- [Java](#1-installere-java)
+- [Kodeeditor (IDE)](#2-kodeeditoride)
+- [Git](#3-git)
+- [GitLab](#4-gitlab)
 
-**Etter installasjon og programmeringsoppgaven skal koden leveres på MittUiB (via Codegrade)**.
+Når du er ferdig med det, må du 
 
-<a name="installere-java">
+ - [Gjennomføre laben](#5-selve-innleveringen)
+
+**Du er ferdig når du har:**
+ - opprettet og kjørt HelloWorld.java fra et terminalvindu, og
+ - dette Hello World -prosjektet kjører i en kodeeditor, og
+- JUnit-testene passerer lokalt på din maskin, og
+- endringene du har gjort er pushet til ditt lab0-repositore på git.app.uib.no, og 
+- du har levert repositoriet på mitt.uib gjennom CodeGrade og den automatiske rettingen gir deg et poeng.
+
+
 
 ## 1) Installere Java
-Vi bruker [Java](https://en.wikipedia.org/wiki/Java_(programming_language)) i kurset, selv om de fleste funksjonene av Java vi kommer til å lære i dette kurset har vært der siden Java 8 anbefales det alltid å ha nyeste versjon av Java. Java 17 kom ut i september 2021 så det er denne vi vil bruke i dette kurset. **Merk**: De fleste Java-brukere er kjent med Oracle sin JDK, men i dette emnet vil vi bruke OpenJDK.
+Vi bruker [Java](https://en.wikipedia.org/wiki/Java_(programming_language)) i kurset. Selv om de fleste elementer av Java vi kommer til å bruke i dette kurset har vært der siden Java 8, anbefaler vi å benytte Java 17, som er nyeste LTS (long-time support) -versjon for øyeblikket. **Merk**: Mange Java-brukere er kjent med Oracle sin kommersielle JDK, men i dette emnet vil vi bruke open source -alternativet OpenJDK.
 
-For at Java skal virke er det 2 hovedmomenter som må være på plass:
-- En mappe som heter jdk-17.0.1 eller lignende må finnes på PCen, inne i den vil det finnes blandt annet 2 filer som heter java.exe og javac.exe
-- PCen må vite hvor denne mappen er slik at når du skriver en kommando så finner PCen rett fil. Dette gjøres litt forskjellig avhengig av operativsystem.
+* [Installere Java 17 for Windows](InstallereJavaWindows.md)
+* [Installere Java 17 for Mac](InstallereJavaMac.md)
 
-Sjekk om du har Java installert ved å gå til et terminalvindu (command line) og skrive `java -version`. Dersom du har Java installert vil du få vite hvilken versjon. Dersom du får `command not found` eller tilsvarende, eller en lavere versjon enn Java 17 (f.eks. 8 eller 9) må du installere nyeste versjonen.
+Linux-brukere kan også følge guiden for Mac.
 
+### Kjøre Java i et terminalvindu
+Når du har installert Java kan du kjøre et javaprogram fra terminalen (Windows: PowerShell).
 
-```
-> java -version
-command not found: java
-```
-
-### Windows
-1. Åpne Filutforsker og naviger deg frem til ``C:\Program Files``. Hvis det ikke finnes allerede opprett en mappe med navn "Java".
-2. [Klikk her for å laste ned Java 17](https://jdk.java.net/17/). Velg ``Windows / x64`` (zip). 
-3. Høyreklikk zip-filen og velg "Pakk ut". Velg Java-mappen du opprettet i steg 1: ``C:\Program Files\Java``.
-4. Legg til "path variable" for Java.
-    - I søkefeltet ned til venstre (Windows søk) skriv "Vis avanserte Systeminnstillinger" og trykk ``enter``.
-    - Trykk på ``Miljøvariabler``
-
-    <img src="images/Avanserte-systeminnstillinger.png" alt="drawing" width="350"/>
-
-    - Under "Brukervariabler for <ditt brukernavn>" trykk på ``Ny``. Variabelnavn: ``JAVA_HOME`` og Variabelverdi: ``C:\Program Files\Java\jdk-17.0.1``.
-
-    <img src="images/JAVA_HOME.png" alt="drawing" width="400"/>
-
-    - Under "Systemvariabler" dobbelklikk variabelen "Path". Trykk "Ny" og skriv inn ``C:\Program Files\Java\jdk-17.0.1\bin``
-
-    <img src="images/Path.png" alt="drawing" width="400"/>
-    
-    - Trykk "Ok" til alle vinduer er stengt.
-
-Når du er ferdig med installasjonen kan du kjøre `java -version` kommandoen igjen *i et nytt terminalvindu*, og sjekke at versjonen er riktig.
-
-```
-> java -version
-openjdk version "17.0.1" 2021-10-19
-OpenJDK Runtime Environment (build 17.0.1+12-39)
-OpenJDK 64-Bit Server VM (build 17.0.1+12-39, mixed mode, sharing)
-```
-
-✅ Når `java -version` kommandoen gir versjon 17 kan du gå videre.
-</a>
-
-### Troubleshooting
-- Dersom terminalvinduet ikke forstår kommandoen (command not found eller lignende) etter Java er installert, kan du prøve å starte et nytt terminalvindu og se om det fungerer der.
-- Har du ikke Windows men likevel problemer med path se [her](https://www.baeldung.com/java-home-on-windows-7-8-10-mac-os-x-linux).
-
-### Mac
-For å installere Java for mac benytt dere av denne guiden:
-https://codippa.com/install-openjdk16-macos/ 
-
-Den omtaler JDK 16. Instalasjonsprosessen er lik, men bruk heller JDK 17: https://jdk.java.net/17/ 
-
-## Kjøre Java
-### 2.1) Kjøre HelloWorld.java i et terminalvindu
-Når du har installert Java kan du kjøre et javaprogram fra terminalen.
-
-Lag en ny fil på en valgfri lokasjon, med et valgfritt _tekstredigeringsverktøy_ (f.eks. Notepad++, Text Edit, TextPad, Atom eller Visual Studio Code), og navngi filen "HelloWorld.java". (Filnavnet skal **ikke** ende med .txt).
+Lag en ny fil på en valgfri lokasjon, med et valgfritt tekstredigeringsverktøy for ren tekst (f.eks. Notepad/Notisblokk i Windows, TextEdit for Mac, Gedit for Ubuntu/Linux eller lignende), og navngi filen `HelloWorld.java`. (Filnavnet skal **ikke** ende med .txt).
 
 Inni filen kan du lime inn det følgende Java-programmet:
 
-```java
+```
 public class HelloWorld {
-	public static void main(String[] args) {
-		System.out.println("Hello World!");
-	}
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
 }
 ```
 
@@ -100,59 +59,58 @@ Error: Could not find or load main class HelloWorld.java
 Caused by: java.lang.ClassNotFoundException: HelloWorld.java
 ```
 
-### Troubleshoothing
-TextEdit vil ofte lage nye filer i RTF-format (tilsvarende som Word-filer). Når du skriver kode ønsker du å bruke _rene tekstfiler_. Gå til innstillinger i TextEdit og velg ren tekstfil, og opprett så en ny fil som du bruker herfra.
+### Kommandoer for navigering i Mac Terminal og Windows Powershell
+I terminal-vinduet befinner du deg til enhver tid i en mappe vi kaller *working directory*. For å navigere mellom mapper er det tre hendige kommandoer vi her introduserer helt kort:
+- `pwd` (mac), ``cd`` (windows)<br/>
+Denne kommandoen ("print working directory") vil vise deg hvilken mappe du befinner deg i for øyeblikket.
+- `ls` (mac), ``dir`` (windows)<br/>
+Denne kommandoen ("list") vil vise deg innholdet i mappen du befinner deg i.
+- `cd mappenavn` (mac og windows)<br/>
+Denne kommadoen ("change directory") vil flytte deg *inn* i mappen "mappenavn". For å gå *ut* av mappen du er i, bruk kommandoen `cd ..` (inkludert to punktum).
 
-### 2.2) Kommandoer for terminal-navigering
-I terminal-vinduet navigerer du ved hjelp av kommandoen `cd` etterfulgt av navnet på mappen du vil gå _inn i_, eller `..` dersom du vil gå _ut_ av mappen du er i.
+Kommandoene over vil virke i terminalene til Mac og Linux, samt i PowerShell og Git Bash for Windows.
 
-`cd INF101` vil forsøke å navigere deg _inn i_ en mappe INF101 som ligger i mappen du er i. Hvis INF101 ikke finnes i mappen du er i, vil du typisk få feilmeldingen `cd: no such file or directory: INF101`.
+✅ **Når du får til å skrive ut `Hello World!` fra terminalen kan du gå videre.**
 
-`cd ..` vil forsøke å navigere deg _opp_ et nivå, ut av mappen du er.
+### Feilsøking
+ - Kommandoene `pwd`, `ls` og `cd` vil ikke ødelegge, slette eller endre noe på datamaskinen din. De er derfor trygge å eksperimentere med.
+ - TextEdit vil ofte lage nye filer i RTF-format (hvor tekst kan ha ulike fonter, skriftstørrelse, fet skrift og lignende, slik som Word-filer). Når du skriver kode ønsker du istedet å bruke *rene tekstfiler*. Gå til innstillinger i TextEdit og velg ren tekstfil (plain text), og opprett så en ny fil som du bruker herfra.
+ 
+## 2) Kodeeditor/IDE
+For å hjelpe oss å skrive kode benytter vi oss av en IDE (Integrated Development Environment). For Java-utvikling er det tre IDE'er vi anbefaler: Eclipse, Visual Studio Code og IntelliJ. I forelesningene kommer hovedsakelig Eclipse og VS Code til å bli brukt, men hvilken som helst vil fungere for deres egen bruk.
 
-`ls` for Mac/Linux og `dir` for Windows er en kommando for å liste opp alle filer og mapper i mappen du er i. Dette er nyttig for å se hvilke mapper og filer som finnes der.
+### Visual Studio Code
+[Visual Studio Code](https://en.wikipedia.org/wiki/Visual_Studio_Code) er en relativt nyutviklet IDE som er utviklet for å kunne brukes med mange ulike språk. Den ble først utgitt av Microsoft i 2015, og har på kort tid blitt enormt populær: i 2021 var dette den foretrukne IDE blant hele 70% av brukerne på StackOverflow, inkludert emneansvarlig Torstein.
 
-✅ Når du får til å skrive ut `Hello World!` fra terminalen kan du gå videre.
+De som har fullført INF100 de siste to årene burde allerede ha Visual Studio Code installert. Hvis ikke kan du laste det ned her: [https://code.visualstudio.com/download](https://code.visualstudio.com/download).
 
-#### Troubleshooting
-NB: Disse to kommandoene vil ikke ødelegge, slette eller endre noe på PCen din. De er derfor trygge å eksperimentere med. Hvis du roter deg vekk i terminalen din kan du alltid bare lukke den og åpne en ny.
+For å hjelpe oss skrive Java-kode vil vi installere en gruppe med utvidelser kalt **"Extension pack for Java"**. Inne i Visual Studio Code trykk på "Extensions" i kolonnen til venstre (evt. menyvalg *View -> Extensions*) og søk "Extension pack for Java". Trykk på `Install`.
 
-<a name="ide">
+Tips til Mac/Linux-brukere: installer `code` som kommando, slik at du kan åpne VS Code direkte fra terminalen: https://stackoverflow.com/questions/30065227/run-open-vscode-from-mac-terminal. For Windows-brukere skal dette virke automatisk.
 
-## 4) Kodeeditor/IDE 
-For å hjelpe oss å skrive kode benytter vi oss av en IDE (Integrated Development Environment). For Java-utvikling er det hovedsakelig tre anbefalte IDE'er: Eclipse, Visual Studio Code og IntelliJ. I forelesningene kommer hovedsakelig Eclipse og VS Code til å bli brukt, men hvilken som helst vil fungere for deres egen bruk.
 
-#### Visual Studio Code
-Dere har tidligere brukt [Visual Studio Code](https://en.wikipedia.org/wiki/Visual_Studio_Code). De som har fullført INF100 de siste to årene burde allerede ha Visual Studio Code installert. Hvis ikke kan du laste det ned her: [https://code.visualstudio.com/download](https://code.visualstudio.com/download).
+### Eclipse
+[Eclipse](<https://en.wikipedia.org/wiki/Eclipse_(software)>) er en annen IDE som er populær blant Java-utviklere. Utgitt først i 2001 av IBM er dette en IDE som er spesialdesignet for Java. Den er også i stor grad utviklet i Java selv. Dette er en IDE som har vært populær over lang tid, og som har et enormt utvalg av plugins for Java-utvikling. Det er også den foretrukne Java-IDE for emneansvarlig Martin.
 
-For å hjelpe oss skrive Java-kode vil vi installere en extension kalt "Extension pack for Java". Inne i Visual Studio Code trykk på "Extensions" i kolonnen til venstre og søk "Extension pack for Java". Trykk på ``Install``.
+Du kan laste ned *Eclipse IDE for Java Developers* her: https://www.eclipse.org/downloads/packages/release/2021-12/r/eclipse-ide-java-developers.
 
-#### Eclipse
-[Eclipse](<https://en.wikipedia.org/wiki/Eclipse_(software)>) er IDE'en brukt i tidligere semestre av INF101.
-
-[Klikk her for å laste ned og installere Eclipse IDE 2021-12](https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2021-12/R/eclipse-inst-jre-win64.exe).
-
-**Du må installere Eclipse for Java Developers, ikke Java EE Developers, C/C++, etc.**
+*Du må installere* ***Eclipse for Java Developers,*** *ikke Java EE Developers, C/C++, etc.*
 
 Velg riktig mappe for Java 17-installasjonen din før du trykker på INSTALL. Hvis du ikke ser Java 17 i nedtrekksmenyen kan du finne riktig mappe ved å gå til terminalen din og skrive kommandoen `which java` i Linux/Unix/Mac OS X eller `where java` i Windows.
 
 Når du er ferdig å installere Eclipse kan du åpne den og velge et passende navn for ditt workspace. F.eks.: "workspace - INF101v22".
 
 Når Eclipse allerede er åpen finner du versjons-informasjon i menyen under Eclipse -> About Eclipse for Mac og Help -> About Eclipse for Windows.
-More info on [intalling Eclipse](https://www.eclipse.org/downloads/packages/installer)
+Mer informasjon om å [installere Eclipse](https://www.eclipse.org/downloads/packages/installer)
 
+## 3) Git
 
-</a>
-<a name="git">
+<!-- GitLab er en av mange git-servere som gjør det enkelt for flere å samarbeide på et kodeprosjekt ved å bruke git. -->
+[Git](https://en.wikipedia.org/wiki/Git) er et verktøy for *versjonskontroll* som hjelper deg å ta vare på (ulike versjoner av) koden. Du kan finne tilbake til forrige versjon og skulle du miste noe data på PCen din så ligger alt i backup på en server.
 
-## 4) git
+Vi bruker git for å levere ut oppgavekode i dette kurset, og du må bruke git for å levere inn laber og oppgaver (slik som denne). Git er meget populært i næringslivet, og er et verktøy du får mye igjen for å lære deg skikkelig. De virkelig store fordelene med git vil åpenbare seg når dere er flere som samarbeider på samme prosjekt, som f. eks. i INF112. Enn så lenge holder det å bli kjent med de grunnleggende funksjonene.
 
-GitLab er en av mange git-servere som gjør det enkelt for flere å samarbeide på et kodeprosjekt ved å bruke git.
-Git er et versjonskontroll verktøy som hjelper deg å ta vare på koden. Du kan finne tilbake til forrige versjon og skulle du miste noe data å PCen din så ligger alt i backup på serveren.
-
-### 4.1) Installere git
-
-Vi bruker [git](https://en.wikipedia.org/wiki/Git) for å levere ut oppgavekode i dette kurset. Vi anbefaler at du bruker det når du koder selv for å sikre deg at du ikke mister det du har gjort. git er meget populært i næringslivet, og er et verktøy du får mye igjen for å lære deg skikkelig. Du vil heldigvis få mange anledninger til det i INF101.
+### Installere git
 
 For de som foretrekker video over tekst har vi en [installasjonsguide](https://www.youtube.com/watch?v=lw3Vz6WsomM):
 
@@ -165,7 +123,7 @@ Sjekk om du har git installert ved å skrive `git` i et terminalvindu. Dersom du
 command not found: git
 ```
 
-[Klikk her for å laste ned og installere git](https://git-scm.com/downloads). Velg ditt operativsystem og kjør den nedlastede filen.
+Du hente git herfra: https://git-scm.com/downloads. Velg ditt operativsystem og følg instruksjonene.
 
 Når du er ferdig med installasjonen kan du kjøre `git` kommandoen igjen, og sjekke at du får oversikt over git kommandoer.
 
@@ -178,102 +136,36 @@ usage: git [--version] [--help] [-C <path>] [-c name=value]
            <command> [<args>]
 ```
 
-✅ Når kommandoen `git` gir deg utskriften vist over kan du gå videre.
+✅ **Når kommandoen `git` gir deg utskrift lignende den vist over kan du gå videre.**
 
-### 4.2) Git server
+## 4) GitLab
 
-Uib har sin egen GitLab server, før du får tilgang til den må du opprette konto der.
+UiB har sin egen GitLab -server. For å få tilgang til den må du opprette konto der.
 
-Gå til [https://git.app.uib.no/](https://git.app.uib.no/) . Logg inn med Dataporten, **IKKE MED Github**. Brukere med Github vil ikke gis tilgang.
+Gå til [https://git.app.uib.no/](https://git.app.uib.no/) og logg inn med Dataporten.
+
+<!-- Logg inn med Dataporten, **IKKE MED Github**. Brukere med Github vil ikke gis tilgang.
 Da blir en konto laget for deg på Gitlab. Viktig: du skal ikke endre det automatiske brukernavnet du får.
-Hvis du endrer brukernavn vil du ikke få tilgang til øvelsene i kurset.
+Hvis du endrer brukernavn vil du ikke få tilgang til øvelsene i kurset. -->
 
-### 4.3) Sette opp ssh key
+### Sette opp ssh key
 
 Det finnes flere måter å logge inn når man bruker git, men det å skrive brukernavn og passord hver gang man har gjort noen endringer er unødvendig.
 En ssh key lagres på PCen slik at hver gang du ber om tilkobling til en server så sjekkes ssh key istedenfor å be om passord.
 
-For å opprette ssh-ky følg denne guiden: https://git.app.uib.no/help/ssh/README#generate-an-ssh-key-pair. Her kan det være enklere å se videoen ovenfor.
+For å opprette ssh-ky følg denne guiden: https://git.app.uib.no/help/ssh/README#generate-an-ssh-key-pair. Her kan det være greit å supplere med å se videoen over.
 
-### Troubleshooting
+#### Feilsøking
 
-En ssh key lagres på PCen, hvis du har 2 PCer må du gjøre dette på begge PCene.
+En ssh key lagres på datamaskinen, hvis du har 2 maskiner må du gjøre dette på begge.
 
-</a>
+Du må vise "skjulte" filer og mapper for å kunne se mappen `.ssh`. 
 
-## 5) Importere et prosjekt inn i Eclipse
+## 5) Selve innleveringen
 
-Eclipse har innebygget støtte for git som kan brukes, men git kan også brukes uavhengig av Eclipse.
-Her forklarer vi hvordan du bruker git separat siden det er den måten som er lettest å forstå.
-Det betyr 2 steg, først laste ned en kopi til en mappe på din PC, og så importere det prosjektet inn i Eclipse. 
-Hvis dere vil bruke Eclipse til å importere kan dere følge denne [guiden](https://tools.jboss.org/documentation/howto/git_import_projects.html#clone_uri)
+Før du begynner på denne delen, må du ha gjort stegene beskrevet over; du må ha installert java openjdk 17, en IDE du liker, og git. I tillegg må du ha opprettet en bruker på [git.app.uib.no](https://git.app.uib.no) og satt opp ssh.
 
-### 5.1) Klone Hello World prosjekt fra GitLab repo
-
-Du skal nå bruke git i terminalvinduet til å laste ned - eller klone - Java-prosjektet [Hello World project] fra UiB sin GitLab server. Et Java-prosjekt er ikke noe mer magisk enn en mappe med blant annet Java-filene i tillegg er det en POM-fil som beskriver Maven prosjektet. 
-
-Når du kloner et prosjekt så hentes mappen med alle filene ned til din maskin. Klone-URLen er nesten den samme som til nettsiden 
-(du finner også denne linken ved å trykke prosjektet inne på GitLab og så på den grønne "Clone"-knappen på Github-siden):
-
-https://git.app.uib.no/ii/inf101/21v/assignments/Fornavn.Etternavn_lab0.git
-
-Naviger deg til en mappe du vil laste ned prosjektet til i et terminalvindu, og klon ved å bruke kommandoen
-
-`> git clone [lim inn adresse for dit prosjekt her]`
-
-Når kloningen er ferdig må du sjekke at Java-prosjektet ligger i den mappen du befinner deg i. Bruk `ls` / `dir` og sjekk at det ligger en ny mappe "lab0" der. Bruk kommandoen `cd lab0` for å navigere deg inn i prosjekt-mappen. Bruk kommandoen `ls` / `dir` igjen for å sjekke at filen `pom.xml` ligger i mappen.
-Du kan også bruke filutforskeren og klikke på rett mappe.
-
-#### Troubleshooting
-
-- Når du kloner fra et git-repositorie så lastes filene ned over nettet. Du må derfor ha en aktiv internett-tilkobling.
-- Filene vil lagres i mappen du befinner deg i når du skriver kommandoen.
-- Google is your friend: for å finne ut av eventuelle rare feil er det lurt å copy-paste dem til Google og se hva slags løsninger andre foreslår.
-
-### 5.2) Importere Hello World-prosjektet i Eclipse
-
-Et IDE kan hjelpe oss å automatisk sette språk-versjoner og test-versjoner til det prosjektet trenger. Vi bruker filen `pom.xml` til å beskrive hvilken Java-versjon og JUnit-versjon Eclipse skal bruke for prosjektet vårt. For å få Eclipse til å lese instillingene fra pom-filen, må vi importere prosjektet som et _Maven-prosjekt_.
-
-Finn menyen **Import** -> **Existing Maven Projects**.
-
-_Root Directory_ skal peke til den mappen som `pom.xml` ligger i. Du kan sjekke hvilken mappe det var i terminalvinduet du brukte i 5.1. Når du finner riktig mappe i Eclipse sin import _wizard_ vil **/pom.xml** vises under **Projects:** og du kan huke av sjekkboksen for at du vil importere det og trykke **Next**.
-
-Klikk deg gjennom menyen til prosjektet dukker opp i Eclipse i Project Explorer-vinduet. Dersom du ikke ser vinduet (eller med et uhell har krysset det vekk) kan du vise vinduet ved å trykke på Window -> Show View -> Package Explorer.
-
-I package explorer kan du se hvilken Javaversion Eclipse linket til prosjektet. Der skal det vises Java 15. Spør en venn, Google, foreleser eller gruppeleder hvis det står en annen versjon enn 15, eller hvis filen din har røde kryss.
-
-✅ Når prosjektet er importert som et Maven-prosjekt og vises i Package Explorer uten røde kryss eller feilmeldinger kan du gå videre.
-
-### 5.3) Kjør Hello World-prosjektet i Eclipse
-
-På samme måte som vi kjørte et Java-program i terminalen i 2.1, skal vi nå kjøre det klonede Java-programmet i Eclipse. Høyreklikk prosjektet i Package Explorer-vinduet. Trykk på **Run as** -> **Java application**. Finn _Consol_ i Eclipse: der skal det nå stå "Hello World!".
-
-✅ Når du har fått "Hello World!" i konsollen i Eclipse kan du gå videre.
-
-### 5.4) Kjør JUnit tester for Hello World-prosjektet i Eclipse
-
-Det siste vi skal gjøre er å kjøre tester for prosjektet vårt. Vi bruker testrammeverket [JUnit](https://www.vogella.com/tutorials/JUnit/article.html), versjon 5. Du trenger ikke installere JUnit manuelt; pom-filen forteller Eclipse hvilken versjon prosjektet skal bruke.
-
-Kjør testene ved å høyreklikke på prosjektet i Package Explorer-vinduet. Trykk på **Run as** -> **JUnit test**. Du vil få opp et JUnit View der de to testene vises som røde hvis de feiler er grønne hvis de passerer.
-
-Sjekk at testene blir grønne (godkjent) i JUnit-vinduet.
-
-_Valgfritt: Dobbelttrykk på en av testene for å åpne filen som testene ligger i (HelloWorldTest.java). Se om du klarer å omtrentlig forstå hva de to testene gjør._
-
-✅ Når de to JUnit-testene kjører og er grønne er du ferdig med installasjonen!
-
-
-### 6) Importer et prosjekt i Visual Studio Code
-Videoguiden for Git viser hvordan man importerer/kloner et prosjekt inn i visual studio code.
-
-#### Troubleshooting
-
-Se om du finner ut av det sammen med en medelev eller Google. Eventuelt spør på gruppe.
-
-<a name="programmeringsoppgave">
-
-# 7) Kodeoppgave
-For å få lab0 godkjent må du levere dette prosjektet hvor alle testene passerer.
+For å få lab0 godkjent må du levere inn din egen versjon av dette prosjektet hvor alle testene passerer.
 
 Filen ``HelloWorldTest.java`` inneholder tre tester:
  - ``testGetHelloWorld``
@@ -282,29 +174,105 @@ Filen ``HelloWorldTest.java`` inneholder tre tester:
 
 For at disse testene ska passere må Java og IDE være installert riktig, Java-versjonen må være 17 og du må sette en variabel til ``true``.
 
-Når alle testene passerer må du laste opp endringene du har gjort i koden. Dette gjøres ved bruk av GIT med kommandoene ``add``, ``commit`` og ``push``.
-
-### Lever med Eclipse
-1. Høyreklikk det aktuelle prosjektet (lab0) i "Project Explorer".
-2. Velg ``Team --> Commit``
-<img src="images/commitEclipse.png" alt="Infy_image" width="300"/>
-
-3. Trykk på grønt kryss (oppe til høyre) for de filene du har gjort endringer på i "Unstaged Changes".
-4. Skriv en "Commit Message" som forklarer hva du har endret og trykk "Commit and Push".
-<img src="images/stagingarea.png" alt="Infy_image" width="700"/>
+Når alle testene passerer må du laste opp endringene du har gjort i koden. Dette gjøres ved bruk av git med kommandoene ``add``, ``commit`` og ``push``.
 
 
-### Lever med Visual Studio Code
-1. I kolonnen til venstre trykk på "Version Control"
-2. Under "Changes" trykk på +-tegnet for de filene du har endret på. 
-3. I tekstfeltet ovenfor skriv hva du har endret.
-4. Trykk ✅ (commit) rett ovenfor tekstfeltet.
-<img src="images/vscodeCommit.png" alt="Infy_image" width="300"/>
+### Laste ned prosjektet fra GitLab
+1. Gå til hovedsiden for dette repositoriet. Du er her sannsynligvis allerede, så det er egentlig ingenting å gjøre; men det kan være greit å ha to kopier oppe for å følge instruksjonene videre. https://git.app.uib.no/ii/inf101/22v/students/lab0.
+2. Lag en "fork" (kopi) av dette repositoriet: Klikk på knappen oppe til høyre: <img src="images/fork.png" height="20"/>
+    - Velg din egen bruker som namespace.
+    - **Merk: dette steget er ikke vist i videoen.**
+3. Åpne din egen versjon av dette repositoriet. Du finner det på din profil-side på git.app.uib.no.
+4. Klon prosjektet til din lokale maskin
+    - Klikk på *clone* i repositoriet, og kopier adressen generert for å laste ned via ssh<br/><img src="images/clone.png" height="150"/>
+    - I terminalen på din maskin (i Windows: Git Bash), naviger til en egnet mappe, for eksempel *inf101v22* -mappen din. Bruk kommandoen:<br/>
+    `git clone <lim inn adresse her>`<br/>
+    - Sjekk med kommandoen `ls`/`dir` at det ble opprettet en ny mappe *lab0*.
 
-5. Trykk "Sync Changes"
+#### Feilsøking
 
-Refresh gitlab-siden hvor prosjektet ditt ligger og se at de endringene du har gjort har kommet.
+- Når du kloner fra et git-repositorie så lastes filene ned over nettet. Du må derfor ha en aktiv internett-tilkobling.
+- Filene vil lagres i mappen du befinner deg i når du skriver kommandoen.
+- Google is your friend: for å finne ut av eventuelle rare feil er det lurt å copy-paste dem til Google og se hva slags løsninger andre foreslår.
 
-**Når du har lastet opp endringene (commit+push) leverer du oppgaven på MittUiB under lab0.**
-</a>
+### Åpne prosjektet med din IDE
 
+#### VS Code
+- Dersom du allerede er i terminalen i mappen som inneholder *lab0*, bruk kommandoen:<br/>
+`code lab0` (hvis du er inni mappen *lab0*, bruk kommando `code .` i stedet)
+- Hvis du ikke bruker terminalen, åpne VS Code og velg "Open folder" fra *Fil*-menyen. Velg mappen *lab0* (mappen som inneholder filen `pom.xml`).
+VS Code vil bruke et par sekunder på å forstå at det er et *Java*-prosjekt med *Maven* som bor i mappen, og vil så være klar til bruk (den skjønner det på grunn av `pom.xml` som er en konfigurasjonsfil for Maven-prosjekter. Ikke tenk på detaljene rundt dette nå.).
+
+Merk: VS Code har også en god integrert løsning for å bruke git uten terminal, se video over.
+
+✅ Når "Explorer" -fanen i VS Code har en seksjon som heter "Java Projects" og du ser *lab0* der, er du klar til å gå videre. Se bilde.
+
+<img src="images/vscode-ready.png" height="300"/>
+
+#### Eclipse
+
+Eclipse har innebygget støtte for git som kan brukes (se https://tools.jboss.org/documentation/howto/git_import_projects.html#clone_uri), men her forklarer vi hvordan du bruker git separat siden det er den måten som er lettest å forstå.
+
+Et IDE kan hjelpe oss å automatisk sette språk-versjoner og test-versjoner til det prosjektet trenger. Vi bruker filen `pom.xml` til å beskrive hvilken Java-versjon og JUnit-versjon Eclipse skal bruke for prosjektet vårt. For å få Eclipse til å lese innstillingene fra pom-filen, må vi importere prosjektet som et _Maven-prosjekt_.
+
+Finn menyen **Import** -> **Existing Maven Projects**.
+
+_Root Directory_ skal peke til den mappen som `pom.xml` ligger i. Når du finner riktig mappe i Eclipse sin import _wizard_ vil **/pom.xml** vises under **Projects:** og du kan huke av sjekkboksen for at du vil importere det og trykke **Next**.
+
+Klikk deg gjennom menyen til prosjektet dukker opp i Eclipse i Project Explorer-vinduet. Dersom du ikke ser vinduet (eller med et uhell har krysset det vekk) kan du vise vinduet ved å trykke på Window -> Show View -> Package Explorer.
+
+I package explorer kan du se hvilken Javaversion Eclipse linket til prosjektet. Der skal det vises Java 17. Spør en venn, Google, foreleser eller gruppeleder hvis det står en annen versjon enn 17, eller hvis filen din har røde kryss.
+
+✅ Når prosjektet er importert som et Maven-prosjekt og vises i Package Explorer uten røde kryss eller feilmeldinger kan du gå videre.
+
+### Sjekk at vi kan kjøre HelloWorld.java
+
+Vi skal kjøre programmet `HelloWorld.java` som finnes i mappen *lab0/src/main/java/lab0*.
+ - *VS Code:* Åpne HelloWorld.java og velg *Run without debugging* fra *Run*-menyen. Alternativt, klikk den lille *Run*-knappen i lysegrått som ligger rett over linjen med `public static void main(String[] args) {`. I begge tilfeller vil en integrert terminal åpnes, og du skal kunne se "Hello World!" samt hvilken kommando VSCode brukte (denne vil gjerne være litt komplisert).
+ - *Eclipse:* Høyreklikk på prosjektet i Package Explorer-vinduet. Trykk på **Run as** -> **Java application**. Finn _Console_ i Eclipse: der skal det nå stå "Hello World!".
+
+✅ Når du har fått "Hello World!" i terminalen/konsollen er du klart til å gå videre.
+
+### Kjøre tester
+
+Det siste vi skal gjøre er å kjøre tester for prosjektet vårt. Vi bruker testrammeverket [JUnit](https://www.vogella.com/tutorials/JUnit/article.html), versjon 5. Du trenger ikke installere JUnit manuelt; pom-filen forteller IDE hvilken versjon prosjektet skal bruke, og installerer den for deg automatisk.
+
+#### VS Code
+1. Gå til **View -> Testing** <img src="images/testing.png" height="20">
+2. Start testene med play-knappen
+
+#### Eclipse
+Kjør testene ved å høyreklikke på prosjektet i Package Explorer-vinduet. Trykk på **Run as** -> **JUnit test**. Du vil få opp et JUnit View der de testene vises som røde hvis de feiler og er grønne hvis de passerer.
+
+### Fiks feilen
+Vi så at to av testene blir grønne (godkjent) i JUnit-vinduet. En tredje test feilet. Undersøk `HelloWorldTest.java` og fiks feilen i `HelloWorld.java`. Se at alle tre testene blir grønne.
+
+Hvis ``testJavaVersion`` feiler betyr det at din versjon av Java er lavere enn 17. Hvis du har Java installert fra et tidligere semester har du mest sannsynlig en lavere Java-versjon enn kravet. Repeter stegene beskrevet for Java-instalasjon.
+
+✅ Når de tre JUnit-testene kjører og er grønne er du ferdig! Nå gjenstår det bare å levere oppgaven.
+
+### Pushe endringer tilbake til GitLab
+
+Du har gjort en endring i `HelloWorld.java` som du må lagre i git. Både VS Code, Eclipse og Intellij har gode integrerte verktøy for å jobbe med git, men vi viser her hvordan vi gjør det i terminalen. Det går fint å bruke f. eks. den integrerte terminalen i VS Code til dette.
+
+1. Naviger til mappen *lab0* hvor pom-filen ligger i terminalen.
+2. Bruk de tre kommandoene under i rekkefølge:
+    - `git add .`
+    - `git commit -m "Fikset bug i HelloWorld.java"`
+    - `git push`
+
+I det første steget (git add) proklamerte vi til git at vi planlegger å ta vare på alle endringer vi har gjort så langt i alle filer. I det andre steget (git commit) ber vi git om å faktisk ta vare på endringene vi tidligere proklamerte, og vi gir disse endringene en beskrivelse for fremtidig referanse. Dette produserer en *commit*, som er en øyeblikkstilstand for alle filene som vi senere kan hente fram ved behov. I det tredje steget (git push), ber vi git flytte endringene til serveren (i vårt tilfelle, ditt lab0-repositorie på git.app.uib.no).
+
+Som nybegynnere med git er det lurt å gjøre alle disse tre operasjonene samtidig. Vi refererer til dem som en en *add-commit-push*. Når vi lærer mer om git senere, vil dere kanskje bruke tilstandene mellom de ulike stegene mer aktivt.
+
+✅ Sjekk at du ser endringen du har gjort i lab0 -repositoriet ditt på [git.app.uib.no](https://git.app.uib.no).
+
+### Levere med CodeGrade på mitt.uib
+
+Åpne lab0 på mitt.uib og følg instruksjonene i Codegrade for å levere med GitLab. Velg repositoriet du har jobbet med.
+
+✅ Du er ferdig når du har fått et poeng av Codegrade. Retting skjer automatisk hver gang du pusher en ny commit.
+
+#### Feilsøking
+
+Se om du finner ut av det sammen med en medelev eller Google. Og kom på gruppe.
