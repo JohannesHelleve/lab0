@@ -143,7 +143,10 @@ usage: git [--version] [--help] [-C <path>] [-c name=value]
 UiB har sin egen GitLab -server. For å få tilgang til den må du opprette konto der.
 
 Gå til [https://git.app.uib.no/](https://git.app.uib.no/) og logg inn med Dataporten.
+
 **VIKTIG: Ikke opprett bruker med Github! Disse brukerne mangler nødvendige rettigher og vil ikke kunne levere de obligatoriske oppgavene.**
+
+<img src="images/noGithub.png" height="150"/>
 
 <!-- Logg inn med Dataporten, **IKKE MED Github**. Brukere med Github vil ikke gis tilgang.
 Da blir en konto laget for deg på Gitlab. Viktig: du skal ikke endre det automatiske brukernavnet du får.
