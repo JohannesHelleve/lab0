@@ -191,12 +191,12 @@ Når alle testene passerer må du laste opp endringene du har gjort i koden. Det
     - Klikk på *clone* i repositoriet, og kopier adressen generert for å laste ned via ssh<br/><img src="images/clone.png" height="150"/>
     - I terminalen på din maskin (i Windows: Git Bash), naviger til en egnet mappe, for eksempel *inf101v22* -mappen din. Bruk kommandoen:<br/>
     `git clone <lim inn adresse her>`<br/>
-    - Sjekk med kommandoen `ls`/`dir` at det ble opprettet en ny mappe *lab0*.
+    - Sjekk med kommandoen `ls` at det ble opprettet en ny mappe *lab0*.
 
 #### Feilsøking
 
 - Når du kloner fra et git-repositorie så lastes filene ned over nettet. Du må derfor ha en aktiv internett-tilkobling.
-- Filene vil lagres i mappen du befinner deg i når du skriver kommandoen.
+- En mappe som inneholder repositoriet vil lagres i mappen du befinner deg i når du skriver kommandoen.
 - Google is your friend: for å finne ut av eventuelle rare feil er det lurt å copy-paste dem til Google og se hva slags løsninger andre foreslår.
 
 ### Åpne prosjektet med din IDE
@@ -262,7 +262,7 @@ Du har gjort en endring i `HelloWorld.java` som du må lagre i git. Både VS Cod
 1. Naviger til mappen *lab0* hvor pom-filen ligger i terminalen.
 2. Bruk de tre kommandoene under i rekkefølge:
     - `git add .`
-    - `git commit -m "Fikset bug i HelloWorld.java"`
+    - `git commit -m "Satt FINISHED_LAB0 til verdi 'true' i HelloWorld.java"`
     - `git push`
 
 I det første steget (git add) proklamerte vi til git at vi planlegger å ta vare på alle endringer vi har gjort så langt i alle filer. I det andre steget (git commit) ber vi git om å faktisk ta vare på endringene vi tidligere proklamerte, og vi gir disse endringene en beskrivelse for fremtidig referanse. Dette produserer en *commit*, som er en øyeblikkstilstand for alle filene som vi senere kan hente fram ved behov. I det tredje steget (git push), ber vi git flytte endringene til serveren (i vårt tilfelle, ditt lab0-repositorie på git.app.uib.no).
