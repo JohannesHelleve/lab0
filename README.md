@@ -14,7 +14,7 @@ Når du er ferdig med det, må du
 
 **Du er ferdig når du har:**
  - opprettet og kjørt HelloWorld.java fra et terminalvindu, og
- - dette Hello World -prosjektet kjører i en kodeeditor, og
+ - din egen fork av dette Hello World -prosjektet kjører i lokalt i din kodeeditor, og
 - JUnit-testene passerer lokalt på din maskin, og
 - endringene du har gjort er pushet til ditt lab0-repositore på git.app.uib.no, og 
 - du har levert repositoriet på mitt.uib gjennom CodeGrade og den automatiske rettingen gir deg et poeng.
