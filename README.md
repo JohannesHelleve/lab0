@@ -59,16 +59,16 @@ Error: Could not find or load main class HelloWorld.java
 Caused by: java.lang.ClassNotFoundException: HelloWorld.java
 ```
 
-### Kommandoer for navigering i Mac Terminal og Windows Powershell
+### Kommandoer for navigering i terminal
 I terminal-vinduet befinner du deg til enhver tid i en mappe vi kaller *working directory*. For å navigere mellom mapper er det tre hendige kommandoer vi her introduserer helt kort:
-- `pwd` (mac), ``cd`` (windows)<br/>
+- `pwd`<br/>
 Denne kommandoen ("print working directory") vil vise deg hvilken mappe du befinner deg i for øyeblikket.
-- `ls` (mac), ``dir`` (windows)<br/>
+- `ls`<br/>
 Denne kommandoen ("list") vil vise deg innholdet i mappen du befinner deg i.
-- `cd mappenavn` (mac og windows)<br/>
-Denne kommadoen ("change directory") vil flytte deg *inn* i mappen "mappenavn". For å gå *ut* av mappen du er i, bruk kommandoen `cd ..` (inkludert to punktum).
+- `cd mappenavn`<br/>
+Denne kommadoen ("change directory") vil flytte deg *inn* i mappen ``mappenavn.'' For å gå *ut* av mappen du er i, bruk kommandoen `cd ..` (inkludert to punktum).
 
-Kommandoene over vil virke i terminalene til Mac og Linux, samt i PowerShell og Git Bash for Windows.
+Kommandoene over vil virke i terminalene til Mac og Linux, samt i PowerShell og Git Bash for Windows. *For Windows CMD (ledetekst/command prompt) gjelder det andre kommandoer, så bruk PowerShell for å følge denne guiden.*
 
 ✅ **Når du får til å skrive ut `Hello World!` fra terminalen kan du gå videre.**
 
