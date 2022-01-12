@@ -96,7 +96,7 @@ Du kan laste ned *Eclipse IDE for Java Developers* her: https://www.eclipse.org/
 
 *Du må installere* ***Eclipse for Java Developers,*** *ikke Java EE Developers, C/C++, etc.*
 
-Velg riktig mappe for Java 17-installasjonen din før du trykker på INSTALL. Hvis du ikke ser Java 17 i nedtrekksmenyen kan du finne riktig mappe ved å gå til terminalen din og skrive kommandoen `which java` i Linux/Unix/Mac OS X eller `where java` i Windows.
+Velg riktig mappe for Java 17-installasjonen din før du trykker på INSTALL. Hvis du ikke ser Java 17 i nedtrekksmenyen kan du finne riktig mappe ved å gå til terminalen din og skrive kommandoen `which java` i Linux/Unix/Mac OS X eller `gcm java` i Windows PowerShell (Alternativer for Windows: se https://superuser.com/a/367408).
 
 Når du er ferdig å installere Eclipse kan du åpne den og velge et passende navn for ditt workspace. F.eks.: "workspace - INF101v22".
 
