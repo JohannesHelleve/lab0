@@ -195,6 +195,7 @@ Når alle testene passerer må du laste opp endringene du har gjort i koden. Det
 
 #### Feilsøking
 
+- Hvis du ikke får lov å legge til fork i ditt eget namespace, kan det være du har logget inn med Github i stedet for Dataporten. Logg ut og logg inn igjen med Dataporten.
 - Når du kloner fra et git-repositorie så lastes filene ned over nettet. Du må derfor ha en aktiv internett-tilkobling.
 - En mappe som inneholder repositoriet vil lagres i mappen du befinner deg i når du skriver kommandoen.
 - Google is your friend: for å finne ut av eventuelle rare feil er det lurt å copy-paste dem til Google og se hva slags løsninger andre foreslår.
