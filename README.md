@@ -84,10 +84,10 @@ For å hjelpe oss å skrive kode benytter vi oss av en IDE (Integrated Developme
 
 De som har fullført INF100 de siste to årene burde allerede ha Visual Studio Code installert. Hvis ikke kan du laste det ned her: [https://code.visualstudio.com/download](https://code.visualstudio.com/download).
 
+>Mac/Linux-brukere tips 1: Hvis du har installert homebrew, kan VS Code enkelt installeres med kommandoen `brew install --cask visual-studio-code`. Dette vil også installere den hendige *code* -kommandoen på systemet ditt, som lar deg åpne VS Code enkelt fra terminalen. Hvis du ikke installerte via homebrew, se https://stackoverflow.com/questions/30065227/run-open-vscode-from-mac-terminal for en guide for å installere *code*. For Windows-brukere skal *code* virke automatisk.
+
+
 For å hjelpe oss skrive Java-kode vil vi installere en gruppe med utvidelser kalt **"Extension pack for Java"**. Inne i Visual Studio Code trykk på "Extensions" i kolonnen til venstre (evt. menyvalg *View -> Extensions*) og søk "Extension pack for Java". Trykk på `Install`.
-
-Tips til Mac/Linux-brukere: installer `code` som kommando, slik at du kan åpne VS Code direkte fra terminalen: https://stackoverflow.com/questions/30065227/run-open-vscode-from-mac-terminal. For Windows-brukere skal dette virke automatisk.
-
 
 ### Eclipse
 [Eclipse](<https://en.wikipedia.org/wiki/Eclipse_(software)>) er en annen IDE som er populær blant Java-utviklere. Utgitt først i 2001 av IBM er dette en IDE som er spesialdesignet for Java. Den er også i stor grad utviklet i Java selv. Dette er en IDE som har vært populær over lang tid, og som har et enormt utvalg av plugins for Java-utvikling. Det er også den foretrukne Java-IDE for emneansvarlig Martin.

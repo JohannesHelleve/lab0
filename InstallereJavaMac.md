@@ -10,7 +10,8 @@ Punktene under skjer i terminalen i Mac OS. Den ligger i mappen *Applications/Ut
 `brew --version`<br/>
 Hvis homebrew allerede er installert, hopp til steg 2.
 - Kopier inn kommandoen under i sin helhet og trykk enter: <br/> `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`<br/>
-- Oppgi passord når du blir bedt om det
+- Oppgi passord når du blir bedt om det, og gå videre når den spør
+- Dersom det kommer en advarsel om at homebrew ikke er i din PATH, følg instruksjonene den foreslår.
 - Sjekk at installasjon var vellykket ved å gi kommandoen<br/>`brew --version`<br/>Du skal da se informasjon om din versjon. Akkurat hvilken er ikke så farlig.
 
 ### 2. Oppdater Homebrew
