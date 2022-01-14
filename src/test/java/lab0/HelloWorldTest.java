@@ -22,7 +22,7 @@ public class HelloWorldTest{
 	
 	@Test
 	void finishedWithLab0() {
-		assertTrue(HelloWorld.FINISHED_LAB0, "You must set this variable to true.");
+		assertTrue(HelloWorld.FINISHED_LAB0, "You must set the variable FINISHED_LAB0 to true in HelloWorld.java.");
 	}
 
 }
