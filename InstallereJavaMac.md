@@ -1,4 +1,4 @@
-# Installere Java 17 på Mac OS
+# Installere Java 17 og Maven på Mac OS
 
 Her er instruksjoner for å installere Java OpenJDK 17 på Mac. Vi anbefaler at du installerer via [Homebrew](https://brew.sh/), som er en pakke-manager for svært mange nyttige verktøy og applikasjoner du vil få lyst på i løpet av ditt virke som programmerer.
 
@@ -8,7 +8,7 @@ Punktene under skjer i terminalen i Mac OS. Den ligger i mappen *Applications/Ut
 ### 1. Installer Homebrew
 - Sjekk om homebrew allerede er installert ved å gi kommandoen<br/>
 `brew --version`<br/>
-Hvis homebrew allerede er installert, hopp til steg 2.
+Hvis homebrew allerede er installert, hopp ned til steg 2 ([Oppdater Homebrew](#2-oppdater-homebrew)).
 - Kopier inn kommandoen under i sin helhet og trykk enter: <br/> `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`<br/>
 - Oppgi passord når du blir bedt om det, og gå videre når den spør
 - Dersom det kommer en advarsel om at homebrew ikke er i din PATH, følg instruksjonene den foreslår.
@@ -39,7 +39,20 @@ Du skal da få informasjon om at din java-versjon er openjdk 17. Du kan også sj
     `mvn --version`<br/>
     Disse skal ha blitt installert sammen med java i openjdk-pakken. *javac* skal være versjon 17, *mvn* (Maven) bør være minst 3.8.
 
+---
+## Installere Maven
 
+Maven er et prosjektstyringsverktøy for Java. I dette kurset blir alle laber og obliger levert ut som maven-prosjekter. Maven helper din IDE med å forstå hvilke bibliotek du bruker (for eksempel bruker vi biblioteket JUnit 5 for å skrive tester), og kan også brukes for å pakke applikasjoner/gjøre dem klar til å brukes av andre.
+
+1. Sjekk om Maven allerede er installert. Gi kommandoen<br/>
+`mvn --version`
+
+2. Dersom maven ikke var installert, installer det med homebrew:<br/>
+`brew install maven`
+
+Sjekk at `mvn --version` nå fungerer. Maven bør helst være versjon 3.8 eller nyere.
+
+---
 ## Installere uten homebrew
 
 Alternativt kan openjdk 17 installeres uten homebrew. Her er en guide for installasjon:
