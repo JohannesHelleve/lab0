@@ -1,7 +1,7 @@
 # Oppsett av Java, Git og Visual Studio Code
 _Dette dokumentet beskriver hvordan du installerer programvaren du trenger for INF101 - vår 2022._
 
-Målet med denne guiden er å installer og bli kjent med:
+Målet med denne guiden er å installere og bli kjent med:
 
 - [Java](#1-installere-java)
 - [Kodeeditor (IDE)](#2-kodeeditoride)
