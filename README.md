@@ -84,7 +84,7 @@ For å hjelpe oss å skrive kode benytter vi oss av en IDE (Integrated Developme
 
 De som har fullført INF100 de siste to årene burde allerede ha Visual Studio Code installert. Hvis ikke kan du laste det ned her: [https://code.visualstudio.com/download](https://code.visualstudio.com/download).
 
->Mac/Linux-brukere tips 1: Hvis du har installert homebrew, kan VS Code enkelt installeres med kommandoen `brew install --cask visual-studio-code`. Dette vil også installere den hendige *code* -kommandoen på systemet ditt, som lar deg åpne VS Code enkelt fra terminalen. Hvis du ikke installerte via homebrew, se https://stackoverflow.com/questions/30065227/run-open-vscode-from-mac-terminal for en guide for å installere *code*. For Windows-brukere skal *code* virke automatisk.
+>Tips til Mac/Linux-brukere: Installer VS Code med kommandoen `brew install --cask visual-studio-code` (homebrew må installeres først). Dette vil også installere den hendige *code* -kommandoen på systemet ditt, som lar deg åpne VS Code enkelt fra terminalen. Hvis du ikke installerte via homebrew, se https://stackoverflow.com/questions/30065227/run-open-vscode-from-mac-terminal for en guide for å installere *code*. For Windows-brukere skal *code* virke automatisk.
 
 
 For å hjelpe oss skrive Java-kode vil vi installere en gruppe med utvidelser kalt **"Extension pack for Java"**. Inne i Visual Studio Code trykk på "Extensions" i kolonnen til venstre (evt. menyvalg *View -> Extensions*) og søk "Extension pack for Java". Trykk på `Install`.
@@ -176,7 +176,7 @@ Filen ``HelloWorldTest.java`` inneholder tre tester:
  - ``testJavaVersion``
  - ``finishedLab0``
 
-For at disse testene ska passere må Java og IDE være installert riktig, Java-versjonen må være 17 og du må sette en variabel til ``true``.
+For at disse testene skal passere må Java og IDE være installert riktig, Java-versjonen må være 17 og du må sette en variabel til ``true``.
 
 Når alle testene passerer må du laste opp endringene du har gjort i koden. Dette gjøres ved bruk av git med kommandoene ``add``, ``commit`` og ``push``.
 
@@ -210,7 +210,7 @@ VS Code vil bruke et par sekunder på å forstå at det er et *Java*-prosjekt me
 
 Merk: VS Code har også en god integrert løsning for å bruke git uten terminal, se video over.
 
-✅ Når "Explorer" -fanen i VS Code har en seksjon som heter "Java Projects" og du ser *lab0* der, er du klar til å gå videre. Se bilde.
+✅ Når "Explorer" -fanen i VS Code har en seksjon som heter "Java Projects" og du ser *lab0* der, er du klar til å gå videre. Se bilde. Det kan hjelpe å åpne en .java -fil i prosjektet for å få VS Code til å begynne gjennkjennelsesprosessen.
 
 <img src="images/vscode-ready.png" height="300"/>
 
