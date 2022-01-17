@@ -3,7 +3,7 @@ _Dette dokumentet beskriver hvordan du installerer programvaren du trenger for I
 
 Målet med denne guiden er å installere og bli kjent med:
 
-- [Java](#1-installere-java)
+- [Java (og Maven)](#1-installere-java)
 - [Kodeeditor (IDE)](#2-kodeeditoride)
 - [Git](#3-git)
 - [GitLab](#4-gitlab)
@@ -25,7 +25,7 @@ Når du er ferdig med det, må du
 Vi bruker [Java](https://en.wikipedia.org/wiki/Java_(programming_language)) i kurset. Selv om de fleste elementer av Java vi kommer til å bruke i dette kurset har vært der siden Java 8, anbefaler vi å benytte Java 17, som er nyeste LTS (long-time support) -versjon for øyeblikket. **Merk**: Mange Java-brukere er kjent med Oracle sin kommersielle JDK, men i dette emnet vil vi bruke open source -alternativet OpenJDK.
 
 * [Installere Java 17 for Windows](InstallereJavaWindows.md)
-* [Installere Java 17 for Mac](InstallereJavaMac.md)
+* [Installere Java 17 (og Maven 3.8) for Mac](InstallereJavaMac.md)
 
 Linux-brukere kan også følge guiden for Mac.
 
@@ -138,6 +138,16 @@ usage: git [--version] [--help] [-C <path>] [-c name=value]
 
 ✅ **Når kommandoen `git` gir deg utskrift lignende den vist over kan du gå videre.**
 
+### Sette git brukernavn og epost
+
+Det er lurt å sette brukernavn og passord for git, ellers vil den klage i tide og utide. Bruk kommandoene:
+
+```
+git config --global user.name "Mona Lisa"
+git config --global user.email "email@example.com"
+```
+
+
 ## 4) GitLab
 
 UiB har sin egen GitLab -server. For å få tilgang til den må du opprette konto der.
@@ -157,7 +167,7 @@ Hvis du endrer brukernavn vil du ikke få tilgang til øvelsene i kurset. -->
 Det finnes flere måter å logge inn når man bruker git, men det å skrive brukernavn og passord hver gang man har gjort noen endringer er unødvendig.
 En ssh key lagres på PCen slik at hver gang du ber om tilkobling til en server så sjekkes ssh key istedenfor å be om passord.
 
-For å opprette ssh-ky følg denne guiden: https://git.app.uib.no/help/ssh/README#generate-an-ssh-key-pair. Her kan det være greit å supplere med å se videoen over.
+For å opprette ssh-ky følg denne guiden: https://git.app.uib.no/help/ssh/README#generate-an-ssh-key-pair. Følg punktene *Generate-an-ssh-key-pair* og *Add an SSH key to your GitLab account*. Når du når punktet "Verify that you can connect," kan du komme tilbake og fortsette herfra. Her kan det være greit å supplere med å se videoen over.
 
 #### Feilsøking
 
